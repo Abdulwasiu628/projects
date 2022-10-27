@@ -1,0 +1,77 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.cert{
+    margin-top: -15rem;
+    z-index: 2;
+    .container{
+        margin-bottom: 0rem;
+        padding-bottom: orem;
+
+        svg{
+            margin-top: -5rem;
+            position: relative;
+            z-index: 0;
+            margin-bottom: 0rem;
+
+        }
+        .row{
+            .column{
+
+                margin-top: -1rem;
+                width: 100%;
+                display: block;
+                position: relative;
+                background-color: white;
+                padding: 0rem;
+                display: flex;
+                .project{
+                
+                    margin-right: 0rem;
+                    width: 50%;
+                    height: fit-content;
+                    
+                    center{
+                        
+                        p{
+                            @include poppins-font;
+                            font-size: 3rem;
+                            font-weight: 700;
+                            text-align: center;
+                            word-wrap: normal;
+                            text-transform: uppercase;
+                            u{
+                                text-decoration: underline;
+                                
+                                
+                            }
+                        }
+                        #note{
+                            font-size: 0.9rem;
+                            font-weight: medium;
+                            text-align: justify;
+                            word-break: normal;
+                            line-height: 1.5rem;
+                            padding: 3.5rem;
+                            text-transform:lowercase;
+
+                            em{
+                                block{
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                img{
+                    
+                    margin-right: 0%;
+                    right: 0;
+                    top: 0;
+                    
+                }
+            }
+        }
+    }
+}

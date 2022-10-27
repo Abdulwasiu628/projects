@@ -1,0 +1,25 @@
+@use '../custom' as *;
+@mixin gradient {
+    background-color: linear-gradient(to right, rgba($primary, .95), rgba($primary, .95));
+}
+@mixin centralize {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    position:absolute;
+    margin-left: 50%;
+    
+}
+@mixin poppins-font {
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    text-align: center;
+    
+    
+}
+@mixin cursive-font {
+    font-family: 'Combo', cursive;
+    font-size: larger;
+    
+}

@@ -1,0 +1,95 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.menu{
+    
+    @include gradient;
+    box-shadow: teal 4px 4px 3px;
+    z-index: 1;
+    transition: all 2s;
+    @include media-breakpoint-down(sm){
+        box-shadow: teal 4px 4px 3px;
+    }
+    @include media-breakpoint-up(sm){
+        box-shadow: teal 4px 4px 3px;
+        width: 100%;
+    }
+    li{
+        padding: 0 0.3rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        align-items: stretch;
+        @include media-breakpoint-down(sm){
+            padding-left: 0rem;
+            margin-left: 0rem;
+        
+        }
+        
+        
+        a{
+            color: azure !important;
+            font-weight: 400;
+            font-family: sans-serif;
+            text-transform: capitalize;
+            display: flex;
+            flex-wrap: nowrap;
+            padding-left: 0.1rem;
+            @include media-breakpoint-down(sm){
+                padding-left: 0rem;
+                margin-left: 0rem;
+            
+            }
+            
+            img{
+                width: 3.5rem;
+                height: 2.0rem;
+                display: none;
+                
+                
+              
+            }
+    
+            
+            &:focus{
+                font-weight: 500;
+                color: blue !important;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                
+
+            }
+            &:hover{
+                background-color: whitesmoke;
+                color: blue !important;
+                padding: 0.15rem 0.875rem;
+                justify-content: center;
+                align-items: center;
+                transition: all 1s;
+                @include media-breakpoint-down(sm){
+                    justify-content: left;
+                    align-items: left;
+                
+                }
+                img{
+                    color: blue !important;
+                    display: flex;
+                    align-items: center;
+                    transform: translate(3px, -1px);
+                    line-height: 50%;
+                    padding: 0rem 0.875rem;
+                    @include media-breakpoint-down(sm){
+                        justify-content: left;
+                        align-items: left;
+                    
+                    }
+                }
+            }
+        }
+        
+    }
+    &:hover{
+        background-color: darkolivegreen !important;
+        transition: all 2s;
+    }
+    
+}

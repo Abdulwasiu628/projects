@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    
+</head>
+<body>
+    <?php
+        if(isset($_GET('name'))){
+            $get_form = htmlentities($_GET('name'));
+            echo $get_form['name'];
+        };
+
+        if(isset($_POST('name'))){
+            $post_form = htmlentities($_POST('name'));
+            print_r $post_form['name'];
+        };
+        
+
+    ?>
+    <div>
+        <p>Server Side:</p>
+        <? php if( $server ): ?>
+            <ul>
+
+                <? php foreach($server as $key => $value): ?>
+
+                    <li>
+                        <strong><? php echo $key ; ?>:</strong><em><? php echo $value ; ?></em>
+                    </li>
+
+                <? php endforeach; ?>
+
+            </ul>
+
+            
+
+
+        <? php endif; ?>
+    </div>
+
+    <div>
+        <p>Client Side:</p>
+        <? php if( $client ): ?>
+            <ul>
+
+                <? php foreach($client as $key => $value): ?>
+
+                    <li>
+                        <strong><? php echo $key ; ?>:</strong><em><? php echo  $value ; ?></em><
+                    </li>
+
+                <? php endforeach; ?>
+
+            </ul>
+
+            
+
+
+        <? php endif; ?>
+    </div>
+    
+</body>
+</html>
